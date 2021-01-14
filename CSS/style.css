@@ -1,0 +1,299 @@
+/* variabler */
+:root {
+    --main_color: #ECEAF3;
+    --footer_color: #29171F;
+    --header_color: #3F395C;
+    --alfabet_color: #703882;
+    --button_color: #934B6B;
+}
+
+
+/* Body */
+body {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+
+body {
+    font-size: 20px;
+    font-family: 'Cousine', monospace; 
+}
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* buttons */
+
+button {
+    color: var(--main_color);
+    transition: all .2s ease;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    box-shadow: 1px 4px 5px #000;
+    margin: .5rem .5rem;
+    height: 2.5rem;
+}
+ button:hover {
+    filter: brightness(1.3);
+    box-shadow: 0px 2px 5px #261f3f;
+    cursor: pointer;
+}
+.hero_buttons > button:active {
+    border: 2px inset #88878b;
+}
+ button:focus {
+    outline: none;
+} 
+  .hero_buttons {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hero_buttons > button {
+    background-color: var(--button_color);
+    border: 2px inset #88878b00;
+    outline: 0;
+    width: 6rem;
+  }
+.alfabetet > button {
+    background-color: var(--alfabet_color);
+    width: 2.5rem;  
+}
+
+/* Header */
+
+.hero {
+    height: 40vh;
+    background-image: url("/IMG/hangman_poster.png");
+    background-size: cover;
+    background-color: var(--header_color);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  /* Poäng */
+
+.poäng-stats {
+    grid-area: points;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2.5rem;
+    font-size: 1rem;
+    transition: all .3s ease-in;
+}
+#poangraknare, .ordbox {
+    transition: all .3s ease;
+}
+#poangraknare, #antal-omgångar, #vunna-omgångar {
+    color: var(--header_color);
+}
+
+/* Nedräkning */
+
+.nedräkning {
+    width: 100%;
+    min-height: 6rem;
+    justify-content: space-between;
+    display: grid;
+    grid-template-areas: 
+    "points lives countdown";
+    background-color: var(--main_color); 
+}
+#fem-min, #tre-min {
+    height: 0;
+    border: 0;
+    font-size: 0;
+    background: 0;
+}
+.nedräkning.synlig {
+    border-radius: 5px;
+    width: 100%;
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    text-shadow: 0px 0px 3px rgb(243, 241, 241);
+    transition: all .3s ease-in;
+    z-index: 0;
+}
+.nedräknings-siffror {
+    grid-area: countdown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    transition: background-color 1s ease-in;
+}
+
+
+/* Lives */
+
+.lives-box {
+    grid-area: lives;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lives-box-h2 {
+    justify-self: start;
+    color: var(--header_color);
+    font-size: 1.2rem;
+}
+.life {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.1rem;
+    border-radius: 100%;
+    background-color: var(--header_color);
+    transition: opacity 1s ease-in-out;
+}
+
+/* Main */
+
+main {
+    min-height: 400px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+    background-color: var(--main_color); 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "ordbox ordbox"
+    "alfabetet hangman";
+    justify-content: center;
+    align-items: center;
+    transition: background-color 2s ease;
+}
+.ordbox {
+    grid-area: ordbox;
+    height: 3rem;
+    min-width: 100%;
+    min-height: 3rem;
+    background-color: var(--button_color);
+    box-shadow: 1px 4px 5px #000;
+    border-radius: 10px;
+    margin: 1rem auto; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--main_color);
+}
+.alfabetet {
+    grid-area: alfabetet;
+    display: flex;
+    flex-direction: row;
+    row-gap: 0;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0;
+    height: 400px;
+}
+.hangman {
+    grid-area: hangman;
+    width: 100%;
+    transition: all 1s ease;
+    z-index: 1;
+    max-height: 400px;
+}
+.anvanda-bokstaver {
+    transition: 3s ease-in-out .5s;
+}
+.synlig {
+    fill: #261f3f;
+    stroke: #261f3f;
+    transition: all .3s ease-in;
+}
+
+
+
+.game-over, .game-won {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative; 
+    z-index: 9999;
+}
+.game-over {
+    background-image: url(/IMG/dead.svg);
+}
+.game-won {
+    background-image: url(/IMG/smiling.svg); 
+}
+.game-over-top, .game-won-top {
+     opacity: 0.5;
+    position: relative;
+    z-index: 998;
+}
+.game-over-top::before,.game-won-top::before {
+    font-size: 3rem;
+    color: var(--footer_color);
+    background-color:var(--main_color);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0rem;
+    height: auto;
+    z-index: 999;
+}
+.game-over-top::before {
+    content: 'GAME OVER!';
+}
+.game-won-top::before {
+    content: 'YOU WON!';
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--header_color);
+}
+
+.klickad {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.klickad:hover, .oklickbar:hover {
+    cursor: default;
+    cursor: not-allowed;
+    filter: brightness(1);
+}
+.klickad:active, .oklickbar:active {
+    border-width: 2px;
+    border-style: outset;
+    border-bottom-color: rgb(10, 10, 10); 
+    border-right-color: rgb(10, 10, 10);
+    border-left-color: grey;
+    border-top-color: grey;
+}
+
+
+
+
+
+.total-död {
+     background-image: url(/IMG/dead.svg); 
+    background-repeat: no-repeat;
+   /*  content: '<svg id="svg-död" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <circle style="fill:#FFE17D;" cx="255.999" cy="256" r="248.499"/> <path id="path1" style="fill:#FFD164;" d="M292.073,468.427c-137.242,0-248.499-111.257-248.499-248.499c0-59.433,20.891-113.97,55.695-156.732 C43.284,108.761,7.501,178.192,7.501,256.001c0,137.241,111.256,248.499,248.499,248.499c77.81,0,147.241-35.784,192.805-91.768 C406.044,447.535,351.505,468.427,292.073,468.427z"/><path d="M181.349,373.317c17.079-18.563,44.986-29.646,74.651-29.646s57.572,11.083,74.651,29.646 c1.479,1.607,3.497,2.422,5.521,2.422c1.815,0,3.635-0.655,5.076-1.981c3.048-2.804,3.246-7.549,0.441-10.597 c-19.87-21.596-51.904-34.49-85.689-34.49s-65.82,12.894-85.689,34.49c-2.804,3.048-2.607,7.793,0.441,10.597 C173.8,376.563,178.544,376.365,181.349,373.317z"/> <path d="M15.108,248.714c1.833-61.604,26.857-119.542,70.459-163.145c43.603-43.603,101.542-68.626,163.145-70.459 c61.333-1.824,120.401,19.43,166.327,59.852c3.109,2.736,7.849,2.435,10.585-0.675c2.737-3.109,2.435-7.849-0.675-10.585 C376.16,20.759,313.414-1.826,248.267,0.117c-65.44,1.947-126.988,28.528-173.305,74.846 C28.644,121.279,2.063,182.827,0.115,248.268C-1.824,313.414,20.757,376.162,63.7,424.951c1.482,1.685,3.552,2.545,5.633,2.545 c1.76,0,3.527-0.616,4.952-1.87c3.109-2.737,3.412-7.476,0.675-10.585C34.538,369.116,13.283,310.046,15.108,248.714z"/> <path d="M448.3,87.052c-2.736-3.109-7.476-3.412-10.585-0.675c-3.109,2.736-3.412,7.476-0.675,10.585 c40.421,45.925,61.677,104.994,59.852,166.326c-1.833,61.604-26.856,119.542-70.459,163.145s-101.541,68.625-163.145,70.459 c-61.338,1.824-120.401-19.43-166.327-59.852c-3.108-2.736-7.848-2.435-10.585,0.675s-2.435,7.849,0.675,10.585 c46.854,41.239,106.579,63.7,168.941,63.7c2.577,0,5.158-0.038,7.742-0.115c65.441-1.948,126.988-28.528,173.305-74.846 c46.318-46.317,72.899-107.865,74.847-173.305C513.823,198.588,491.242,135.84,448.3,87.052z"/> <path d="M134.478,261.305c1.464,1.464,3.384,2.197,5.303,2.197c1.919,0,3.839-0.732,5.303-2.197l26.765-26.765l26.765,26.765 c1.464,1.464,3.384,2.197,5.303,2.197s3.839-0.732,5.303-2.197c2.929-2.929,2.929-7.677,0-10.606l-26.765-26.765l26.765-26.765 c2.929-2.929,2.929-7.678,0-10.606c-2.928-2.929-7.677-2.93-10.606,0l-26.765,26.765l-26.765-26.765 c-2.929-2.93-7.678-2.93-10.606,0c-2.929,2.929-2.929,7.677,0,10.606l26.765,26.765l-26.765,26.765 C131.549,253.627,131.549,258.375,134.478,261.305z"/> <path d="M377.578,186.562c-2.929-2.93-7.678-2.93-10.606,0l-26.765,26.765l-26.765-26.765c-2.928-2.929-7.677-2.93-10.606,0 c-2.929,2.929-2.929,7.677,0,10.606l26.765,26.765l-26.765,26.765c-2.929,2.929-2.929,7.677,0,10.606 c1.464,1.464,3.384,2.197,5.303,2.197c1.919,0,3.839-0.732,5.303-2.197l26.765-26.765l26.765,26.765 c1.464,1.464,3.384,2.197,5.303,2.197c1.919,0,3.839-0.732,5.303-2.197c2.929-2.929,2.929-7.677,0-10.606l-26.765-26.765 l26.765-26.765C380.507,194.239,380.507,189.491,377.578,186.562z"/></svg>';
+    */ width: 50vw;
+    margin: 10vh auto;
+    background-position: center;
+}
