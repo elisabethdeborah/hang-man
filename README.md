@@ -1,4 +1,2 @@
-# Hanga-gubbe
-Hänga gubbe-projekt
-Av: Elisabeth och Sara
-:-) !!
+# Hang-man
+Inlämningsuppgift i kursen JavaScript 1
