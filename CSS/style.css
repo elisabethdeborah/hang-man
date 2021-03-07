@@ -23,6 +23,16 @@ h2 {
     margin-block-end: 0;
 }
 
+#header-h1-svg {
+    max-width: 80vw;
+    margin: 2rem auto;
+}
+
+#header-img {
+    max-height: 200px;
+    filter: grayscale(100) opacity(.9);
+}
+
 /* buttons */
 
 #A-svg {
@@ -32,6 +42,11 @@ h2 {
 
 #A-svg.clicked {
     opacity: 0;
+}
+
+
+.bokstavs-svg > path {
+    transition: all 1s ease;
 }
 
 button {
@@ -56,10 +71,15 @@ button {
     outline: none;
 } 
   .hero_buttons {
-    position: absolute;
+  /*   position: absolute;
     top: 75%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    display: flex;
+    position: relative;
+    padding: 3rem;
+    z-index: 9;
+    justify-content: center;
   }
   .hero_buttons > button {
     background-color: rgba(255, 255, 255, 0);
@@ -68,6 +88,7 @@ button {
     box-shadow: -5px -5px 0 0px var(--header_color), -5px -5px 0 2px #fff;
     transition: all .25s ease-in;
     position: relative;
+    
     }
 
   .hero_buttons > button:hover {
@@ -102,17 +123,19 @@ button {
 
 .hero {
     height: 40vh;
-   /*  background-image: url("/IMG/hangman_poster.png"); */
+/*    background-image: url(/IMG/hang-man-header.svg);
     background-size: cover;
     background-color: var(--header_color);
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    position: relative; */
   }
 
 .wrapper {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 10rem auto;
+    padding: 3rem 0;
+    position: relative;
 }
 
   /* Poäng */

@@ -32,7 +32,7 @@ let linjer = [
 
 ];
 
-
+/* 
 //Bokstavs-SVG-array
 let bokstavsPath = [
     //A
@@ -103,7 +103,7 @@ let bokstavsPath = [
 
 
 
-
+ */
 
 
 const main = document.querySelector('main');
@@ -125,55 +125,24 @@ const totaltAntalVunnaOmgångar = document.querySelector('#vunna-omgångar');
 const hangmanBackground = document.querySelector('.hangman');
 let alfabeteBokstäver;
 
-/* 
-let testTest = document.createElement('article');
-testTest.innerHTML=test;
-
-poängräknare.appendChild(testTest);
-
- */
-
 alfabeteBokstäver = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 
 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä','Ö'];
 
 
-
-
-
-
-
-
-let createPath = (bokstavsPath, bokstav) => {
-    let path = `<path id="${bokstav.toLowerCase()}" fill="none" stroke="#1b1a1a" stroke-width="10" stroke-miterlimit="0" d="${bokstavsPath}"/>`;
- 
+/* let createPath = (bokstavsPath, bokstav) => {
+    let path = `<path id="bokstav-${bokstav}" fill="none" stroke="#1b1a1a" stroke-width="10" stroke-miterlimit="0" d="${bokstavsPath}"/>`;
+    return path;
 }
 
 
 let createSvg = (bokstavsPath, bokstav) => {
-    let path = `<path id="${bokstav.toLowerCase()}" fill="none" stroke="#1b1a1a" stroke-width="10" stroke-miterlimit="0" d="${bokstavsPath}"/>`;
-    let svg = `<svg width="75" height="110" viewBox="0 0 56 60">${path}</svg>`;
-  //  console.log(path);
-  //  let svg = `<svg width="56" height="93" viewBox="0 0 56 93"><path fill="none" stroke="#1b1a1a" stroke-width="10" stroke-miterlimit="0" d="${bokstavsPath}/></svg>`;
-  //  let svg = `<svg width="56" height="93" viewBox="0 0 56 93">${path}</svg>`;
+    let path = `<path id="bokstav-${bokstav.toLowerCase()}" fill="none" stroke="#1b1a1a" stroke-width="10" stroke-miterlimit="0" d="${bokstavsPath}"/>`;
+    let svg = `<svg width="75" class="bokstavs-svg" height="110" viewBox="0 0 56 60">${path}</svg>`;
     return svg;
 }
+ */
 
 
-
-//let test = createSvg(bokstavsPath[20], alfabeteBokstäver[20]);
-
-
-
-
-
-
-
-
-
-
-
-let A ='<svg width="73" height="89" viewBox="0 0 73 89" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M38.2812 0.375C38.2812 1.29167 38.9583 1.75 40.3125 1.75L41.6562 1.0625C42.3229 1.52083 43.6771 1.75 45.7188 1.75L45.0312 3.09375C48.1771 3.09375 49.75 4.89583 49.75 8.5C52.9167 16.2083 55.625 24.0938 57.875 32.1562H59.2188C62.1771 30.3438 65.5521 29.4375 69.3438 29.4375H72.0625C72.0625 32.2292 69.8125 34.0312 65.3125 34.8438V35.5312H66.6562C66.6562 35.0729 66.8854 34.8438 67.3438 34.8438C67.3438 35.7396 68.4688 36.1875 70.7188 36.1875V37.5625C66.6562 38.9375 64.625 40.5104 64.625 42.2812V45L63.2812 44.3125V45C63.7188 45 63.9375 45.2188 63.9375 45.6562H61.25C61.25 48.0521 62.1458 53.0104 63.9375 60.5312C63.5 60.5312 63.2812 60.75 63.2812 61.1875H63.9375C63.9375 60.75 64.1667 60.5312 64.625 60.5312L69.3438 80.125C69.3438 82.2708 67.7708 84.0729 64.625 85.5312C62.6667 85.5312 60.8646 84.4062 59.2188 82.1562C58.8854 82.1562 57.5312 82.375 55.1562 82.8125C53.5312 82.8125 51.9583 78.7604 50.4375 70.6562C49.9792 70.6562 49.75 70.2083 49.75 69.3125H50.4375C49.9792 67.5208 49.3021 65.9479 48.4062 64.5938C48.4062 64.1354 48.6354 63.9062 49.0938 63.9062C48.1979 61.9688 47.2917 58.8125 46.375 54.4375C42.0625 54.4375 38.6875 56.4688 36.25 60.5312H33.5312C33.5312 59.5104 33.3125 58.6042 32.875 57.8125C28.375 59.1667 25.8958 60.5208 25.4375 61.875L24.75 63.2188L25.4375 64.5938C24.5417 66.4271 24.0938 67.7708 24.0938 68.625L24.75 70C24.1667 72.5417 22.1458 75.2396 18.6875 78.0938C15.5417 85.1771 13.7396 88.7812 13.2812 88.9062H9.90625C8.98958 88.9062 8.53125 88.4583 8.53125 87.5625V82.1562H7.875L9.21875 80.125V77.4062C8.73958 77.4062 8.0625 77.1875 7.1875 76.75C7.1875 77.1875 6.96875 77.4062 6.53125 77.4062L7.1875 78.7812C5.8125 83.7188 4.6875 86.1875 3.8125 86.1875H3.125C2.6875 86.1875 2.46875 85.9688 2.46875 85.5312L1.125 86.1875H0.4375V83.5L3.8125 73.375L5.15625 74.0312H5.84375V73.375H4.5V72.6875C5.39583 71.5417 6.96875 65.6875 9.21875 55.125V54.4375C9.21875 53.5417 7.86458 52.6458 5.15625 51.75V49.7188C9.69792 49.7188 12.4062 47.4688 13.2812 42.9688C13.8229 42.9688 14.7188 40.9375 15.9688 36.875H15.3125C15.75 35.5208 16.1979 34.8438 16.6562 34.8438L15.9688 33.5V32.8125C15.9688 32 17.0938 29.0729 19.3438 24.0312C18.9062 24.0312 18.6875 23.8125 18.6875 23.375H20.0312C20.0312 22.9167 19.8021 22.6875 19.3438 22.6875C19.8021 19.5417 20.4792 17.9688 21.375 17.9688L20.7188 16.5938C23.1354 9.38542 24.7083 5.78125 25.4375 5.78125H26.7812L28.125 6.46875C28.9167 2.86458 31.3958 1.0625 35.5625 1.0625C35.7917 1.0625 36.6979 0.833333 38.2812 0.375ZM39.625 12.5625C38.7292 15.9375 38.2812 17.9583 38.2812 18.625C39.6354 18.625 40.3125 19.5312 40.3125 21.3438H42.3438V20.6562C40.9896 18.8646 40.3125 16.1667 40.3125 12.5625H39.625ZM36.25 22C36.25 23.0208 36.0208 23.9271 35.5625 24.7188C36.0208 25.5938 36.25 26.2708 36.25 26.75C35.5417 26.9167 33.9688 31.1979 31.5312 39.5938L35.5625 40.25C35.5625 38.8958 37.3646 38 40.9688 37.5625V36.875C40.9688 35.25 39.625 30.2917 36.9375 22H36.25Z" fill="#1b1a1a"/></svg>';
-//let aSvg = document.getElementById('A-svg');
 
 //SVG-BILD
 const svgHelaBilden = document.querySelectorAll('#svg_hela>.barn');
@@ -294,34 +263,67 @@ let matchaBokstäver = (bokstav) => {
 let displayRättBokstäver = (bokstav) => {
 
     let korrektaIndex = getAllIndexes(ordetsBokstäver, bokstav);  
-    let bokstavsSvg;
-    alfabeteBokstäver.forEach((letter, index) => {
+    //let bokstavsSvg;
+    //let path;
+
+
+
+
+    /* alfabeteBokstäver.forEach((letter, index) => {
         if (letter.toLowerCase()===bokstav) {
-            console.log(letter, index, bokstavsPath[index]);
              bokstavsSvg = createSvg(bokstavsPath[index], bokstav); 
-           
+           //  var animering = svgAnimera(bokstavsPath[index], bokstav);
+           path = createPath(bokstavsPath, bokstav);
+     
         } 
-    });
+    }); */
 
-  //  let bokstavsSvg = matchaBokstäver(bokstav);
+/*     let skapaBokstavsElement = (bokstavsSvg, path) => {
+    let bokstav = document.createElement('article');
+    bokstav.innerHTML = bokstavsSvg;
+    
+    //'<svg width="55" height="53" viewBox="0 0 55 53" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="A-path" fill="none" stroke="#1b1a1a" stroke-width="8" stroke-miterlimit="0" d="M54.3125 45.4375C54.1875 46.0208 53.9167 46.5 53.5 46.875C53.125 47.2083 52.6667 47.4792 52.125 47.6875C51.5833 47.8958 51.0208 48.0417 50.4375 48.125C49.8958 48.1667 49.3958 48.1875 48.9375 48.1875C48.7292 48.1875 48.5208 48.1875 48.3125 48.1875C48.1458 48.1458 47.9583 48.125 47.75 48.125C47.5417 48.125 47.4375 48.2292 47.4375 48.4375C47.4375 48.6458 47.3333 48.7917 47.125 48.875C46.9167 48.7917 46.7083 48.7292 46.5 48.6875C46.2917 48.6458 46.0833 48.625 45.875 48.625C45.5833 48.625 45.2917 48.6458 45 48.6875C44.75 48.7292 44.5 48.75 44.25 48.75C43.9167 48.75 43.6667 48.7083 43.5 48.625C43.375 48.5417 43.25 48.4583 43.125 48.375C43.0417 48.25 42.9375 48.125 42.8125 48C42.7292 47.875 42.5833 47.7708 42.375 47.6875C42.0833 47.5625 41.8333 47.5417 41.625 47.625C41.4583 47.7083 41.1875 47.5833 40.8125 47.25C40.3125 46.8333 39.875 46.3333 39.5 45.75C39.1667 45.125 38.8333 44.4792 38.5 43.8125C38.1667 43.1458 37.8125 42.4792 37.4375 41.8125C37.0625 41.1458 36.625 40.5625 36.125 40.0625H35.625C34.875 40.0625 34.3542 40.375 34.0625 41C33.8542 40.875 33.6458 40.7292 33.4375 40.5625C33.2292 40.3542 33 40.1875 32.75 40.0625C31.7917 40.3542 30.7917 40.6042 29.75 40.8125C28.7083 41.0208 27.6667 41.125 26.625 41.125H25.75C25.5 41.125 25.2292 41.0833 24.9375 41C24.5208 41.1667 24.1458 41.375 23.8125 41.625C23.4792 41.8333 23.1042 41.9375 22.6875 41.9375C22.4375 41.9375 22.1458 41.8542 21.8125 41.6875C21.5625 41.6875 21.4375 41.7917 21.4375 42C21.4792 42.2083 21.3542 42.3125 21.0625 42.3125H20.5C19.9167 42.3125 19.3333 42.3333 18.75 42.375C18.2083 42.4167 17.6458 42.4375 17.0625 42.4375C16.2708 42.4375 15.4583 42.3333 14.625 42.125C14.4167 42.25 14.1875 42.3125 13.9375 42.3125C13.7708 42.3958 13.6458 42.5417 13.5625 42.75C13.4792 42.9167 13.3958 43.0833 13.3125 43.25C13.2292 43.375 13.1042 43.5 12.9375 43.625C12.8125 43.7083 12.625 43.7292 12.375 43.6875C12.2917 44.1875 12.0833 44.5833 11.75 44.875C11.4167 45.1667 11.25 45.6042 11.25 46.1875C10.7917 46.4375 10.4167 46.75 10.125 47.125C9.83333 47.5 9.54167 47.8958 9.25 48.3125C8.95833 48.7292 8.64583 49.125 8.3125 49.5C8.02083 49.875 7.64583 50.1667 7.1875 50.375C6.97917 50.625 6.91667 51.0208 7 51.5625C6.54167 51.9375 5.97917 52.2708 5.3125 52.5625C4.64583 52.8542 4.02083 53 3.4375 53C2.22917 53 1.39583 52.3542 0.9375 51.0625C0.9375 50.6458 0.979167 50.2083 1.0625 49.75C1.10417 49.25 1.1875 48.7917 1.3125 48.375C1.4375 47.9167 1.625 47.5208 1.875 47.1875C2.125 46.8125 2.47917 46.5417 2.9375 46.375C2.9375 46 2.8125 45.75 2.5625 45.625C2.3125 45.4583 2.20833 45.1875 2.25 44.8125C3.375 44.2708 4.35417 43.5625 5.1875 42.6875C6.02083 41.8125 6.77083 40.8958 7.4375 39.9375C8.14583 38.9375 8.85417 37.9375 9.5625 36.9375C10.2708 35.9375 11.0625 35.0417 11.9375 34.25V32.9375C13.1875 31.6042 14 30.1042 14.375 28.4375C14.8333 28.3542 15.125 28.1458 15.25 27.8125C15.4167 27.4792 15.5 27.0833 15.5 26.625C15.7083 26.625 15.8333 26.5417 15.875 26.375C15.9583 26.1667 16.1458 26.1042 16.4375 26.1875C16.8125 25.1875 17.2292 24.2708 17.6875 23.4375C18.1458 22.6042 18.6042 21.7708 19.0625 20.9375C19.5208 20.0625 19.9167 19.1667 20.25 18.25C20.625 17.3333 20.8958 16.3125 21.0625 15.1875C21.6458 15.1458 21.9583 14.875 22 14.375C22.0833 13.8333 22.1667 13.3542 22.25 12.9375C22.875 12.3542 23.3333 11.6667 23.625 10.875C23.9583 10.0833 24.25 9.27083 24.5 8.4375C24.75 7.5625 25.0208 6.70833 25.3125 5.875C25.6458 5 26.1042 4.22917 26.6875 3.5625V3.375C26.6875 3.16667 26.6042 3.04167 26.4375 3C26.2708 2.91667 26.1875 2.77083 26.1875 2.5625C26.2292 2.52083 26.25 2.47917 26.25 2.4375C26.75 2.22917 27.125 1.89583 27.375 1.4375C27.625 0.9375 28 0.583333 28.5 0.375C29.375 1.08333 30.1458 1.52083 30.8125 1.6875C31.4792 1.8125 32.3542 1.91667 33.4375 2C33.9792 2.58333 34.2708 3.29167 34.3125 4.125C34.3958 4.91667 34.5417 5.70833 34.75 6.5C35.0833 7.83333 35.4375 9.14583 35.8125 10.4375C36.2292 11.6875 36.5417 12.9792 36.75 14.3125C36.875 15.1042 37.1042 15.8542 37.4375 16.5625C37.7708 17.2708 38 18 38.125 18.75C38.2083 19.3333 38.2083 20 38.125 20.75C38.0417 21.4583 38.125 22.0833 38.375 22.625L38.8125 23.625C39.0208 24.0833 39.1875 24.5625 39.3125 25.0625C39.4792 25.5625 39.625 26.0625 39.75 26.5625C40.0833 27.8125 40.375 29.1667 40.625 30.625C40.9167 32.0417 41.3542 33.3333 41.9375 34.5C42.1458 34.9167 42.4583 35.2083 42.875 35.375C43.3333 35.5417 43.8333 35.6667 44.375 35.75C44.9167 35.7917 45.4375 35.8125 45.9375 35.8125C46.4792 35.7708 46.9375 35.75 47.3125 35.75H47.9375C48.1875 35.75 48.4375 35.7917 48.6875 35.875C48.8542 36.2083 48.9375 36.5 48.9375 36.75C48.9375 37.25 48.7708 37.6458 48.4375 37.9375C48.1042 38.2292 47.9375 38.5625 47.9375 38.9375C47.9375 39.1458 48.0208 39.375 48.1875 39.625C48.0208 39.5833 47.7708 39.5625 47.4375 39.5625C46.4792 39.5625 45.5417 39.7292 44.625 40.0625C44.9583 40.7708 45.3958 41.375 45.9375 41.875C46.5208 42.3333 47.125 42.7708 47.75 43.1875C48.1667 42.8542 48.6042 42.6875 49.0625 42.6875C49.5625 42.6875 50.0208 42.8125 50.4375 43.0625C50.8958 43.2708 51.375 43.375 51.875 43.375C52.25 43.375 52.5208 43.3125 52.6875 43.1875C53.0208 43.5625 53.2917 43.9583 53.5 44.375C53.7083 44.75 53.9792 45.1042 54.3125 45.4375ZM34.75 35.4375C34.6667 34.7292 34.5208 34.2292 34.3125 33.9375C34.1458 33.6042 34 33.2083 33.875 32.75C33.7083 32.1667 33.5833 31.5417 33.5 30.875C33.4583 30.2083 33.375 29.5625 33.25 28.9375C32.9583 27.5208 32.625 26.1042 32.25 24.6875C31.9167 23.2708 31.4792 21.8958 30.9375 20.5625C31.1042 20.3125 31.1875 20.0833 31.1875 19.875V19.6875C30.8125 19.2708 30.5417 18.7708 30.375 18.1875C30.2083 17.5625 30.0417 16.9583 29.875 16.375C29.75 15.75 29.5625 15.1875 29.3125 14.6875C29.1042 14.1458 28.75 13.7083 28.25 13.375C28.125 13.625 28.0625 13.9167 28.0625 14.25C28.0625 14.5417 28.0833 14.8125 28.125 15.0625C28.2083 15.3125 28.25 15.5833 28.25 15.875C27.8333 16.0833 27.5208 16.4167 27.3125 16.875C27.1458 17.2917 26.8542 17.625 26.4375 17.875C26.1042 19.2083 25.625 20.4792 25 21.6875C24.375 22.8542 23.7083 24.0208 23 25.1875C22.3333 26.3542 21.6875 27.5417 21.0625 28.75C20.4375 29.9167 19.9375 31.1458 19.5625 32.4375C19.0208 32.8125 18.6458 33.2917 18.4375 33.875C18.2708 34.4583 18.1875 35.0417 18.1875 35.625C18.5625 35.8333 18.9792 35.9583 19.4375 36C19.9375 36 20.4167 36 20.875 36C21.3333 36 21.7708 36.0417 22.1875 36.125C22.6042 36.2083 22.9792 36.4167 23.3125 36.75C23.8542 36.5833 24.4375 36.4792 25.0625 36.4375C25.7292 36.3542 26.2708 36.1667 26.6875 35.875C27.5208 36.1667 28.4167 36.3125 29.375 36.3125C29.875 36.3125 30.3542 36.2708 30.8125 36.1875C31.3125 36.1042 31.7917 36 32.25 35.875C32.625 35.9583 32.9167 36.1042 33.125 36.3125C33.3333 36.4792 33.6458 36.5417 34.0625 36.5C34.2708 36.3333 34.3958 36.1667 34.4375 36C34.4792 35.7917 34.5833 35.6042 34.75 35.4375Z"/></svg>'; 
+    poängräknare.appendChild(bokstav);
+    rättGissadeBokstäverSynas.appendChild(bokstav);
+} */
 
+
+/* 
+    let length = path.getTotalLength();
+    // Clear any previous transition
+    path.style.transition = path.style.WebkitTransition = 'none';
+    // Set up the starting positions
+    path.style.strokeDasharray = length + ' ' + length;
+    path.style.strokeDashoffset = length;
+    // Trigger a layout so styles are calculated & the browser
+    // picks up the starting position before animating
+    path.getBoundingClientRect();
+    // Define our transition
+    path.style.transition = path.style.WebkitTransition =
+    'stroke-dashoffset 2s ease-in-out';
+    // Go!
+    path.style.strokeDashoffset = '0';
+
+ */
+
+  
 
     //SPLICE PÅ FÖRSTA AV VARJE BOKSTAV + TAR BORT DE FULA KOMMATECKNEN
-    linjer.splice(korrektaIndex[0], 1, bokstavsSvg).join(' ');
+    linjer.splice(korrektaIndex[0], 1, bokstav).join(' ');
 
     //OM FLER AV SAMMA BOKSTÄVER, SPLICE PÅ DERAS INDEX + TAR BORT DE FULA KOMMATECKNEN
     if (korrektaIndex[1]) {
-        linjer.splice(korrektaIndex[1], 1, bokstavsSvg).join(' ');
+        linjer.splice(korrektaIndex[1], 1, bokstav).join(' ');
     }
     if (korrektaIndex[2]) {
-        linjer.splice(korrektaIndex[2], 1, bokstavsSvg).join(' ');
+        linjer.splice(korrektaIndex[2], 1, bokstav).join(' ');
     }
-/* 
-    svgAnimera(bokstavsPath, bokstav); */
-    
 
-    //TAR BORT DE FULA KOMMATECKNEN MELLAN BOKSTÄVERNA
-    rättGissadeBokstäverSynas.innerHTML = linjer.join(' '); 
+
+     //TAR BORT DE FULA KOMMATECKNEN MELLAN BOKSTÄVERNA
+     rättGissadeBokstäverSynas.innerHTML = linjer.join(' '); 
+   
+  
 
     //KOLLA OM DET SAKNAS BOKSTÄVER ELLER OM ALLA BOKSTÄVER ÄR PÅ PLATS => VUNNIT
     let sorteradOrdetsBokstäver = [];
@@ -387,9 +389,9 @@ let displayRättBokstäver = (bokstav) => {
     }
 };
 
-/* 
+
 //SLUTANIMERING EFTER RÄTT GISSAT ORD -> RUTORNA KRYMPER OCH KOMMER TILLBAKA
-animering = () => {
+/* animering = () => {
      anime({
         targets: '.alfabetet>button',
         scale: [
@@ -398,7 +400,7 @@ animering = () => {
         ],
         delay: anime.stagger(200, {grid: [6, 5], from: 'center'})
       });  
-}; */
+};  */
 
 
 let displayFelBokstäver = () => {
@@ -471,15 +473,15 @@ let displayFelBokstäver = () => {
 
 //////
 
-let svgAnimera = (bokstavsPath, bokstav) => {
+/* let svgAnimera = (pathLength, bokstav) => {
     console.log(bokstav);
-    let path = createPath(bokstavsPath, bokstav);
-   // let path = document.getElementById(`'${bokstav}'`);
-    let length = path.getTotalLength();
+    // let path = createPath(bokstavsPath, bokstav);
+    //let path2 = document.querySelector(`#bokstav-${bokstav}`); 
+    //let length = path.getTotalLength();
     // Clear any previous transition
     path.style.transition = path.style.WebkitTransition = 'none';
     // Set up the starting positions
-    path.style.strokeDasharray = length + ' ' + length3;
+    path.style.strokeDasharray = length + ' ' + length;
     path.style.strokeDashoffset = length;
     // Trigger a layout so styles are calculated & the browser
     // picks up the starting position before animating
@@ -493,6 +495,7 @@ let svgAnimera = (bokstavsPath, bokstav) => {
 
 
 }
+ */
 
 
 
@@ -500,31 +503,10 @@ let svgAnimera = (bokstavsPath, bokstav) => {
 
 
 
-
-
-var path = document.querySelector('#Ö-path');
-//console.log(path);
-var length = path.getTotalLength();
-//console.log(length);
-// Clear any previous transition
-path.style.transition = path.style.WebkitTransition = 'none';
-// Set up the starting positions
-path.style.strokeDasharray = length + ' ' + length;
-path.style.strokeDashoffset = length;
-//console.log(path.style.strokeDasharray, path.style.strokeDashoffset);
-// Trigger a layout so styles are calculated & the browser
-// picks up the starting position before animating
-path.getBoundingClientRect();
-//console.log(path.getBoundingClientRect());
-// Define our transition
-path.style.transition = path.style.WebkitTransition =
-  'stroke-dashoffset 2s ease-in-out';
-// Go!
-path.style.strokeDashoffset = '0';
 
 ///////
 
-
+/*
 
 var path3 = document.querySelector('#M-path');
 var length3 = path3.getTotalLength();
@@ -560,13 +542,38 @@ path2.style.transition = path2.style.WebkitTransition =
   'stroke-dashoffset 2s ease-in-out';
 // Go!
 path2.style.strokeDashoffset = '0';
-
+ */
 
 
 
 
 //STARTAR NY SPELOMGÅNG 
 let startaNyOmgång = () => {
+/* 
+let tessst = document.createElement('article');
+tessst.innerHTML = '<svg width="55" height="53" viewBox="0 0 55 53" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="A-path" fill="none" stroke="#1b1a1a" stroke-width="8" stroke-miterlimit="0" d="M54.3125 45.4375C54.1875 46.0208 53.9167 46.5 53.5 46.875C53.125 47.2083 52.6667 47.4792 52.125 47.6875C51.5833 47.8958 51.0208 48.0417 50.4375 48.125C49.8958 48.1667 49.3958 48.1875 48.9375 48.1875C48.7292 48.1875 48.5208 48.1875 48.3125 48.1875C48.1458 48.1458 47.9583 48.125 47.75 48.125C47.5417 48.125 47.4375 48.2292 47.4375 48.4375C47.4375 48.6458 47.3333 48.7917 47.125 48.875C46.9167 48.7917 46.7083 48.7292 46.5 48.6875C46.2917 48.6458 46.0833 48.625 45.875 48.625C45.5833 48.625 45.2917 48.6458 45 48.6875C44.75 48.7292 44.5 48.75 44.25 48.75C43.9167 48.75 43.6667 48.7083 43.5 48.625C43.375 48.5417 43.25 48.4583 43.125 48.375C43.0417 48.25 42.9375 48.125 42.8125 48C42.7292 47.875 42.5833 47.7708 42.375 47.6875C42.0833 47.5625 41.8333 47.5417 41.625 47.625C41.4583 47.7083 41.1875 47.5833 40.8125 47.25C40.3125 46.8333 39.875 46.3333 39.5 45.75C39.1667 45.125 38.8333 44.4792 38.5 43.8125C38.1667 43.1458 37.8125 42.4792 37.4375 41.8125C37.0625 41.1458 36.625 40.5625 36.125 40.0625H35.625C34.875 40.0625 34.3542 40.375 34.0625 41C33.8542 40.875 33.6458 40.7292 33.4375 40.5625C33.2292 40.3542 33 40.1875 32.75 40.0625C31.7917 40.3542 30.7917 40.6042 29.75 40.8125C28.7083 41.0208 27.6667 41.125 26.625 41.125H25.75C25.5 41.125 25.2292 41.0833 24.9375 41C24.5208 41.1667 24.1458 41.375 23.8125 41.625C23.4792 41.8333 23.1042 41.9375 22.6875 41.9375C22.4375 41.9375 22.1458 41.8542 21.8125 41.6875C21.5625 41.6875 21.4375 41.7917 21.4375 42C21.4792 42.2083 21.3542 42.3125 21.0625 42.3125H20.5C19.9167 42.3125 19.3333 42.3333 18.75 42.375C18.2083 42.4167 17.6458 42.4375 17.0625 42.4375C16.2708 42.4375 15.4583 42.3333 14.625 42.125C14.4167 42.25 14.1875 42.3125 13.9375 42.3125C13.7708 42.3958 13.6458 42.5417 13.5625 42.75C13.4792 42.9167 13.3958 43.0833 13.3125 43.25C13.2292 43.375 13.1042 43.5 12.9375 43.625C12.8125 43.7083 12.625 43.7292 12.375 43.6875C12.2917 44.1875 12.0833 44.5833 11.75 44.875C11.4167 45.1667 11.25 45.6042 11.25 46.1875C10.7917 46.4375 10.4167 46.75 10.125 47.125C9.83333 47.5 9.54167 47.8958 9.25 48.3125C8.95833 48.7292 8.64583 49.125 8.3125 49.5C8.02083 49.875 7.64583 50.1667 7.1875 50.375C6.97917 50.625 6.91667 51.0208 7 51.5625C6.54167 51.9375 5.97917 52.2708 5.3125 52.5625C4.64583 52.8542 4.02083 53 3.4375 53C2.22917 53 1.39583 52.3542 0.9375 51.0625C0.9375 50.6458 0.979167 50.2083 1.0625 49.75C1.10417 49.25 1.1875 48.7917 1.3125 48.375C1.4375 47.9167 1.625 47.5208 1.875 47.1875C2.125 46.8125 2.47917 46.5417 2.9375 46.375C2.9375 46 2.8125 45.75 2.5625 45.625C2.3125 45.4583 2.20833 45.1875 2.25 44.8125C3.375 44.2708 4.35417 43.5625 5.1875 42.6875C6.02083 41.8125 6.77083 40.8958 7.4375 39.9375C8.14583 38.9375 8.85417 37.9375 9.5625 36.9375C10.2708 35.9375 11.0625 35.0417 11.9375 34.25V32.9375C13.1875 31.6042 14 30.1042 14.375 28.4375C14.8333 28.3542 15.125 28.1458 15.25 27.8125C15.4167 27.4792 15.5 27.0833 15.5 26.625C15.7083 26.625 15.8333 26.5417 15.875 26.375C15.9583 26.1667 16.1458 26.1042 16.4375 26.1875C16.8125 25.1875 17.2292 24.2708 17.6875 23.4375C18.1458 22.6042 18.6042 21.7708 19.0625 20.9375C19.5208 20.0625 19.9167 19.1667 20.25 18.25C20.625 17.3333 20.8958 16.3125 21.0625 15.1875C21.6458 15.1458 21.9583 14.875 22 14.375C22.0833 13.8333 22.1667 13.3542 22.25 12.9375C22.875 12.3542 23.3333 11.6667 23.625 10.875C23.9583 10.0833 24.25 9.27083 24.5 8.4375C24.75 7.5625 25.0208 6.70833 25.3125 5.875C25.6458 5 26.1042 4.22917 26.6875 3.5625V3.375C26.6875 3.16667 26.6042 3.04167 26.4375 3C26.2708 2.91667 26.1875 2.77083 26.1875 2.5625C26.2292 2.52083 26.25 2.47917 26.25 2.4375C26.75 2.22917 27.125 1.89583 27.375 1.4375C27.625 0.9375 28 0.583333 28.5 0.375C29.375 1.08333 30.1458 1.52083 30.8125 1.6875C31.4792 1.8125 32.3542 1.91667 33.4375 2C33.9792 2.58333 34.2708 3.29167 34.3125 4.125C34.3958 4.91667 34.5417 5.70833 34.75 6.5C35.0833 7.83333 35.4375 9.14583 35.8125 10.4375C36.2292 11.6875 36.5417 12.9792 36.75 14.3125C36.875 15.1042 37.1042 15.8542 37.4375 16.5625C37.7708 17.2708 38 18 38.125 18.75C38.2083 19.3333 38.2083 20 38.125 20.75C38.0417 21.4583 38.125 22.0833 38.375 22.625L38.8125 23.625C39.0208 24.0833 39.1875 24.5625 39.3125 25.0625C39.4792 25.5625 39.625 26.0625 39.75 26.5625C40.0833 27.8125 40.375 29.1667 40.625 30.625C40.9167 32.0417 41.3542 33.3333 41.9375 34.5C42.1458 34.9167 42.4583 35.2083 42.875 35.375C43.3333 35.5417 43.8333 35.6667 44.375 35.75C44.9167 35.7917 45.4375 35.8125 45.9375 35.8125C46.4792 35.7708 46.9375 35.75 47.3125 35.75H47.9375C48.1875 35.75 48.4375 35.7917 48.6875 35.875C48.8542 36.2083 48.9375 36.5 48.9375 36.75C48.9375 37.25 48.7708 37.6458 48.4375 37.9375C48.1042 38.2292 47.9375 38.5625 47.9375 38.9375C47.9375 39.1458 48.0208 39.375 48.1875 39.625C48.0208 39.5833 47.7708 39.5625 47.4375 39.5625C46.4792 39.5625 45.5417 39.7292 44.625 40.0625C44.9583 40.7708 45.3958 41.375 45.9375 41.875C46.5208 42.3333 47.125 42.7708 47.75 43.1875C48.1667 42.8542 48.6042 42.6875 49.0625 42.6875C49.5625 42.6875 50.0208 42.8125 50.4375 43.0625C50.8958 43.2708 51.375 43.375 51.875 43.375C52.25 43.375 52.5208 43.3125 52.6875 43.1875C53.0208 43.5625 53.2917 43.9583 53.5 44.375C53.7083 44.75 53.9792 45.1042 54.3125 45.4375ZM34.75 35.4375C34.6667 34.7292 34.5208 34.2292 34.3125 33.9375C34.1458 33.6042 34 33.2083 33.875 32.75C33.7083 32.1667 33.5833 31.5417 33.5 30.875C33.4583 30.2083 33.375 29.5625 33.25 28.9375C32.9583 27.5208 32.625 26.1042 32.25 24.6875C31.9167 23.2708 31.4792 21.8958 30.9375 20.5625C31.1042 20.3125 31.1875 20.0833 31.1875 19.875V19.6875C30.8125 19.2708 30.5417 18.7708 30.375 18.1875C30.2083 17.5625 30.0417 16.9583 29.875 16.375C29.75 15.75 29.5625 15.1875 29.3125 14.6875C29.1042 14.1458 28.75 13.7083 28.25 13.375C28.125 13.625 28.0625 13.9167 28.0625 14.25C28.0625 14.5417 28.0833 14.8125 28.125 15.0625C28.2083 15.3125 28.25 15.5833 28.25 15.875C27.8333 16.0833 27.5208 16.4167 27.3125 16.875C27.1458 17.2917 26.8542 17.625 26.4375 17.875C26.1042 19.2083 25.625 20.4792 25 21.6875C24.375 22.8542 23.7083 24.0208 23 25.1875C22.3333 26.3542 21.6875 27.5417 21.0625 28.75C20.4375 29.9167 19.9375 31.1458 19.5625 32.4375C19.0208 32.8125 18.6458 33.2917 18.4375 33.875C18.2708 34.4583 18.1875 35.0417 18.1875 35.625C18.5625 35.8333 18.9792 35.9583 19.4375 36C19.9375 36 20.4167 36 20.875 36C21.3333 36 21.7708 36.0417 22.1875 36.125C22.6042 36.2083 22.9792 36.4167 23.3125 36.75C23.8542 36.5833 24.4375 36.4792 25.0625 36.4375C25.7292 36.3542 26.2708 36.1667 26.6875 35.875C27.5208 36.1667 28.4167 36.3125 29.375 36.3125C29.875 36.3125 30.3542 36.2708 30.8125 36.1875C31.3125 36.1042 31.7917 36 32.25 35.875C32.625 35.9583 32.9167 36.1042 33.125 36.3125C33.3333 36.4792 33.6458 36.5417 34.0625 36.5C34.2708 36.3333 34.3958 36.1667 34.4375 36C34.4792 35.7917 34.5833 35.6042 34.75 35.4375Z"/></svg>'; 
+poängräknare.appendChild(tessst);
+
+let path = document.getElementById('A-path')
+console.log(path.getTotalLength());
+
+    let length = path.getTotalLength();
+    // Clear any previous transition
+    path.style.transition = path.style.WebkitTransition = 'none';
+    // Set up the starting positions
+    path.style.strokeDasharray = length + ' ' + length;
+    path.style.strokeDashoffset = length;
+    // Trigger a layout so styles are calculated & the browser
+    // picks up the starting position before animating
+    path.getBoundingClientRect();
+    // Define our transition
+    path.style.transition = path.style.WebkitTransition =
+    'stroke-dashoffset 2s ease-in-out';
+    // Go!
+    path.style.strokeDashoffset = '0'; */
+
+
+
    // aSvg.classList.add('clicked')
      //BOKSTÄVERNA PÅ KNAPPARNA KOMMER FRAM NÄR MAN KLICKAT START
     alfabete.forEach((bokstav, index)=> {
@@ -599,7 +606,7 @@ let startaNyOmgång = () => {
     //SLUMPAR FRAM ETT ORD I ORD-LISTAN
     let slumpaOrd = Math.floor(Math.random()*79);    
     let nyttOrd=ord[slumpaOrd];           
-
+console.log(nyttOrd);
     //DELAR UPP ORDET I BOKSTÄVER                                 
     nyttOrd=nyttOrd.toLowerCase().split('');  
 
@@ -608,7 +615,7 @@ let startaNyOmgång = () => {
 
     //LÄGGER TILL EVENTLISTENER PÅ VARJE KNAPP (VARJE BOKSTAV I ALFABETET
     //VID KLICK STARTAR FUNKTIONEN "VALDBOKSTAV"
-    let bokstav;
+let bokstav;
     for (bokstav of alfabete) {
         bokstav.addEventListener('click', valdBokstav);        
         if (!bokstav.classList.contains('klickad')){
@@ -630,7 +637,7 @@ let valdBokstav = (event) => {
         let bokstav = event.target.innerText.toLowerCase();
         event.target.classList.add('klickad');      
         let bokstavsmätare=0;       
-        
+        console.log('vald bokstav: ', bokstav);
         //KOLLAR OM DEN VALDA BOKSTAVEN FINNS I RÄTTBOKSTÄVER-LISTAN, OM DEN FINNS BLIR BOKSTAVSMÄTAREN 1, ANNARS ÄR DEN 0
         let rättBokstav;
         for (rättBokstav of ordetsBokstäver) {
@@ -782,3 +789,34 @@ let reset = () => {
     location.reload();
 };
 resetKnapp.addEventListener('click', reset);
+
+
+
+
+
+
+
+/* 
+
+
+
+var path = document.querySelector('#A-path');
+//console.log(path);
+var length = path.getTotalLength();
+//console.log(length);
+// Clear any previous transition
+path.style.transition = path.style.WebkitTransition = 'none';
+// Set up the starting positions
+path.style.strokeDasharray = length + ' ' + length;
+path.style.strokeDashoffset = length;
+//console.log(path.style.strokeDasharray, path.style.strokeDashoffset);
+// Trigger a layout so styles are calculated & the browser
+// picks up the starting position before animating
+path.getBoundingClientRect();
+//console.log(path.getBoundingClientRect());
+// Define our transition
+path.style.transition = path.style.WebkitTransition =
+  'stroke-dashoffset 2s ease-in-out';
+// Go!
+path.style.strokeDashoffset = '0';
+ */
