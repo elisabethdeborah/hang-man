@@ -132,7 +132,7 @@ button {
   }
 
 .wrapper {
-    width: 80%
+    width: 80%;
     max-width: 1000px;
     margin: 10rem auto;
     padding: 3rem 0;
@@ -344,7 +344,6 @@ footer {
 .klickad:hover, .oklickbar:hover {
     cursor: default;
     cursor: not-allowed;
-    filter: brightness(1);
 }
 .klickad:active, .oklickbar:active {
     border-width: 2px;
