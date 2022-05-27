@@ -149,7 +149,7 @@ const svgHelaBilden = document.querySelectorAll('#svg_hela>.barn');
 
 //COUNTDOWN TIMER
 
-let nedräkning = document.querySelector('.nedräkning');
+let nedräkning = document.querySelector('.hangman');
 const minutesDisplay = document.querySelector('.minutes-display');
 const secondsDisplay = document.querySelector('.seconds-display');
 
