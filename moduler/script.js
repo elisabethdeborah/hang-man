@@ -106,6 +106,7 @@ let bokstavsPath = [
  */
 
 const hangman = document.querySelector('.hangman');
+const anvandaBokstaver = document.querySelector('.anvanda-bokstaver');
 const main = document.querySelector('main');
 const resetKnapp = document.querySelector('#reset'); 
 const startKnapp = document.querySelector('#start');
@@ -149,7 +150,7 @@ const svgHelaBilden = document.querySelectorAll('#svg_hela>.barn');
 
 //COUNTDOWN TIMER
 
-let nedräkning = document.querySelector('.hangman');
+let nedräkning = document.querySelector('.nedräkning');
 const minutesDisplay = document.querySelector('.minutes-display');
 const secondsDisplay = document.querySelector('.seconds-display');
 
@@ -773,13 +774,13 @@ let tidenUte = (currentTime, interval) => {
 //ÄNDRAR FÄRG PÅ SIFFRORNA 
 let färgNedräkning = (currentTime, sekunder) => {
     if (currentTime > (sekunder) * 0.75) {
-        nedräkning.style.color = '#3D943F';
+        anvandaBokstaver.style.color = '#3D943F';
     } else if (currentTime > (sekunder) * 0.5) {
-        nedräkning.style.color = '#acac02';
+        anvandaBokstaver.style.color = '#acac02';
     } else if (currentTime > (sekunder) * 0.25) {
-        nedräkning.style.color = 'orange';
+        anvandaBokstaver.style.color = 'orange';
     } else {
-        nedräkning.style.color = 'rgb(141, 9, 9)';
+        anvandaBokstaver.style.color = 'rgb(141, 9, 9)';
     }    
 };
 
