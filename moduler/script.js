@@ -105,7 +105,7 @@ let bokstavsPath = [
 
  */
 
-
+const hangman = document.querySelector('.hangman');
 const main = document.querySelector('main');
 const resetKnapp = document.querySelector('#reset'); 
 const startKnapp = document.querySelector('#start');
@@ -224,7 +224,7 @@ let nollställOmgång = () => {
     setTimeout (() => hangmanBackground.classList.remove('game-won'), 5000);
     setTimeout (() => rättGissadeBokstäverSynas.classList.remove('game-over-top'), 5000);
     setTimeout (() => rättGissadeBokstäverSynas.classList.remove('game-won-top'), 5000);
-    setTimeout(() => main.style.backgroundColor='var(--main_color)', (500));
+    setTimeout(() => hangman.style.backgroundColor='var(--main_color)', (500));
       //TA BORT COUNTDOWN-SIFFROR
     setTimeout(() => {
         secondsDisplay.style.opacity='0';
@@ -411,7 +411,7 @@ let displayFelBokstäver = () => {
             if (index == felBokstäver.indexOf(bokstav)){          
                 del.classList.add('synlig');   
                 antalFel=index;  
-                 main.style.backgroundColor='rgba(112, 56, 130, 0.'+antalFel+1+')';  
+                 hangman.style.backgroundColor='rgba(112, 56, 130, 0.'+antalFel+1+')';  
 
                   anime({
                     targets: '.barn-'+(index+1)+' path',
